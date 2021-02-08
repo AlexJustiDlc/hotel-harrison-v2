@@ -279,7 +279,6 @@ public class ReservaService {
         return MapperUtil.ReservaUnique(reservaxcodigo);
     }
 
-    /**/
     public ReservaDto findByHabitacion(Long id){
         List<Reserva> reservaXhabitacion = repository.findByHabitacionId(id);
 

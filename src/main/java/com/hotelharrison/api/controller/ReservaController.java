@@ -60,7 +60,6 @@ public class ReservaController {
         return ResponseEntity.status(HttpStatus.OK).body(service.findByCodigoReserva(codigo, idHabitacion));
     }
 
-    /**/
     @GetMapping("/habitacion/{id}")
     public ResponseEntity<?> findByHabitacionId(@PathVariable Long id) {
         return ResponseEntity.status(HttpStatus.OK).body(service.findByHabitacion(id));

@@ -88,9 +88,9 @@ insert into usuario(nombre, apellido, dni, correo, password, direccion, telefono
 insert into usuario(nombre, apellido, dni, correo, password, direccion, telefono, tipo_usuario_id, estado) values ('HARRISON APP', 'APLICATIVO MOVIL', '00000000', 'root@gmail.com', 'rootharrison69', 'HOTEL HARRISON', '000000000', 2, true);
 insert into usuario(nombre, apellido, dni, correo, password, direccion, telefono, tipo_usuario_id, estado) values ('ALEX MANUEL', 'VEREAU CACERES', '71234569', 'd4si@gmail.com', 'd4si123', 'Av. bayovar huascar - SJL', '912345678', 2, true);
 
-insert into reserva(fecha_inicio, fecha_final, creado_en, usuario_id, huesped_id, habitacion_id, igv, descuento, precio_total, pago_adelantado, estado) values ('2021-02-16', '2021-02-18', '2021-02-10T07:12:25', 3, 2, 1, 18.0, 0.0, 100.0, 50.0, 'PENDIENTE');
-insert into reserva(fecha_inicio, fecha_final, creado_en, usuario_id, huesped_id, habitacion_id, igv, descuento, precio_total, pago_adelantado, estado) values ('2021-02-17', '2021-02-20', '2021-02-15T07:11:45', 3, 3, 15, 32.4, 0.0, 180.0, 90.0,'ACTIVO');
-insert into reserva(fecha_inicio, fecha_final, placa_vehiculo, creado_en, usuario_id, huesped_id, estacionamiento_id, habitacion_id, igv, descuento, precio_total, pago_adelantado, estado) values ('2021-02-20', '2021-02-25', 'AEA-123', '2021-02-17T10:00:06', 3, 4, 2, 41, 135, 0.0, 750.0, 300.0, 'FINALIZADO');
+insert into reserva(fecha_inicio, fecha_final, creado_en, usuario_id, huesped_id, habitacion_id, igv, descuento, precio_total, pago_adelantado, estado, codigo_reserva) values ('2021-02-16', '2021-02-18', '2021-02-10T07:12:25', 3, 2, 1, 18.0, 0.0, 100.0, 50.0, 'PENDIENTE', '1A2B3C4D5E');
+insert into reserva(fecha_inicio, fecha_final, creado_en, usuario_id, huesped_id, habitacion_id, igv, descuento, precio_total, pago_adelantado, estado, codigo_reserva) values ('2021-02-17', '2021-02-20', '2021-02-15T07:11:45', 3, 3, 15, 32.4, 0.0, 180.0, 90.0,'ACTIVO', '5E4D3C2B1A');
+insert into reserva(fecha_inicio, fecha_final, placa_vehiculo, creado_en, usuario_id, huesped_id, estacionamiento_id, habitacion_id, igv, descuento, precio_total, pago_adelantado, estado, codigo_reserva) values ('2021-02-20', '2021-02-25', 'AEA-123', '2021-02-17T10:00:06', 3, 4, 2, 41, 135, 0.0, 750.0, 300.0, 'FINALIZADO', '1E2D3C4B5A');
 
 
 insert into factura(razon_social, creado_en, reserva_id, estado) values ('HUESPED', '2020-11-24T07:10:16', 1, 'PENDIENTE');
