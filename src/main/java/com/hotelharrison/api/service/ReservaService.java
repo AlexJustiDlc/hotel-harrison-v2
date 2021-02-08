@@ -275,7 +275,7 @@ public class ReservaService {
     public ReservaDto findByCodigoReserva(String codigo, Long idHabitacion) {
         Reserva reservaxcodigo = repository.findByCodigoReserva(codigo);
         if (reservaxcodigo == null) throw new NotFound("No se encontró la reserva con el código: "+codigo);
-        if (reservaxcodigo.getHabitacion().getId() != idHabitacion) throw new NotFound("'El código '"+codigo + "' no pertenece a está habitación");
+        if (!reservaxcodigo.getHabitacion().getId().equals(idHabitacion)) throw new NotFound("'El código '"+codigo + "' no pertenece a está habitación");
         return MapperUtil.ReservaUnique(reservaxcodigo);
     }
 
