@@ -12,4 +12,6 @@ public interface HabitacionRepository extends JpaRepository<Habitacion, Long> {
     List<Habitacion> findByIdNotIn(List<?> datos);
     List<Habitacion> findByTipoHabitacionNroCamas(Integer nro);
     List<Habitacion> findByPromocion(Boolean prom);
+
+    Integer countByTipoHabitacionId(Long id);
 }
