@@ -21,7 +21,7 @@ public class ContadoresController {
         return ResponseEntity.status(HttpStatus.OK).body(serviceH.countTipoHabitacion(id));
     }
 
-    @GetMapping("/huepedes")
+    @GetMapping("/huespedes")
     public ResponseEntity<?> countHuesped(){
         return ResponseEntity.status(HttpStatus.OK).body(serviceH.countHuespedes());
     }
