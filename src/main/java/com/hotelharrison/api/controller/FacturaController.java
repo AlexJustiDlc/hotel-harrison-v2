@@ -44,7 +44,7 @@ public class FacturaController {
 
     @PostMapping("/find-date")
     public ResponseEntity<?> findDate(@RequestBody FechasDto fechas) {
-        return ResponseEntity.status(HttpStatus.FOUND).body(service.findDate(fechas));
+        return ResponseEntity.status(HttpStatus.OK).body(service.findDate(fechas));
     }
 
     @GetMapping("/pdf/{reservaId}")

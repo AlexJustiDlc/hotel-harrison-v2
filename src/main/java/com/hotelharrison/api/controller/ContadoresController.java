@@ -35,4 +35,9 @@ public class ContadoresController {
     public ResponseEntity<?> countReservas(){
         return ResponseEntity.status(HttpStatus.OK).body(serviceH.countReservas());
     }
+
+    @GetMapping("/ventas")
+    public ResponseEntity<?> countVentas(){
+        return ResponseEntity.status(HttpStatus.OK).body(serviceH.countVentas());
+    }
 }

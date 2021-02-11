@@ -2,14 +2,8 @@ package com.hotelharrison.api.service;
 
 import com.hotelharrison.api.config.error.exceptions.BadRequest;
 import com.hotelharrison.api.config.error.exceptions.NotFound;
-import com.hotelharrison.api.model.Habitacion;
-import com.hotelharrison.api.model.Huesped;
-import com.hotelharrison.api.model.Reserva;
-import com.hotelharrison.api.model.TipoHabitacion;
-import com.hotelharrison.api.repository.HabitacionRepository;
-import com.hotelharrison.api.repository.HuespedRepository;
-import com.hotelharrison.api.repository.ReservaRepository;
-import com.hotelharrison.api.repository.TipoHabitacionRepository;
+import com.hotelharrison.api.model.*;
+import com.hotelharrison.api.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -34,6 +28,8 @@ public class ContadoresService {
     @Autowired
     private ReservaRepository repositoryR;
 
+    @Autowired
+    private FacturaRepository repositoryF;
 
     public Map<Object, String> countTipHabDescripcion(Long id){
         Map<Object, String> resp = new HashMap<>();
@@ -64,7 +60,7 @@ public class ContadoresService {
 
     public Integer countHabitaciones(){
         List<Habitacion> habitacion = repositoryHa.findAll();
-        if (habitacion.isEmpty()) throw new NotFound("No se encontraron registros de Huespedes");
+        if (habitacion.isEmpty()) throw new NotFound("No se encontraron registros de Habitaciones");
 
         return habitacion.size();
     }
@@ -76,6 +72,11 @@ public class ContadoresService {
         return reservas.size();
     }
 
+    public Integer countVentas(){
+        List<Factura> facturas = repositoryF.findAll();
+        if (facturas.isEmpty()) throw new NotFound("No se encontraron registros de Ventas");
 
+        return facturas.size();
+    }
 
 }
