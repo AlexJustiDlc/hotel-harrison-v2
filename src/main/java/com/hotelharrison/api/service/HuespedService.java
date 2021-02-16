@@ -51,6 +51,12 @@ public class HuespedService {
         if (huesped.getApellido().isEmpty()) throw new BadRequest("Ingrese un Apellido para el Huesped");
         huesped.setApellido(huesped.getApellido());
 
+        if (huesped.getDocumento() != null) {
+            boolean doc = repository.existsHuespedByDocumento(huesped.getDocumento());
+            if (doc) throw new BadRequest("El documento que ingreso ya existe");
+            huesped.setDocumento(huesped.getDocumento());
+        }
+
         if (huesped.getCorreo() == null) huesped.setCorreo(null);
         else {
             if (huesped.getCorreo().isEmpty()) huesped.setCorreo(null);

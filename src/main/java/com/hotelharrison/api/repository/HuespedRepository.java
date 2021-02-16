@@ -8,4 +8,5 @@ import org.springframework.stereotype.Repository;
 public interface HuespedRepository extends JpaRepository<Huesped, Long> {
     Boolean existsHuespedByCorreoAndPassword(String c, String p);
     Huesped findByCorreo(String c);
+    Boolean existsHuespedByDocumento(String d);
 }
